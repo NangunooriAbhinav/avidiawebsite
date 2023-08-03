@@ -1,6 +1,7 @@
 :root {
   --orange: #ff4c29;
   --black: #272829;
+  --darkorange: #e45826;
 }
 
 body {
@@ -66,4 +67,56 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+.container {
+  background-color: var(--black);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+}
+.main-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 3px solid var(--darkorange);
+  border-radius: 1%;
+}
+
+.main-heading {
+  background-color: var(--black);
+  top: 4rem;
+  left: 7rem;
+  display: flex;
+  position: absolute;
+  height: 50%;
+  width: 18%;
+  align-items: center;
+  border: 3px solid var(--orange);
+  border-radius: 5%;
+  padding: 1%;
+}
+
+.main-heading-h1 {
+  font-weight: 80;
+}
+
+.sub-heading {
+  bottom: 3rem;
+  right: 8rem;
+  background-color: var(--black);
+  display: flex;
+  position: absolute;
+  height: 40%;
+  width: 15%;
+  align-items: center;
+  border: 3px solid var(--orange);
+  border-radius: 5%;
+  padding: 2%;
+}
+
+.sub-heading-h1 {
+  font-weight: 80;
 }
