@@ -195,3 +195,46 @@ body {
   visibility: visible;
   transform: scale(100) translateX(2px);
 }
+
+.about {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.container-abt {
+  display: flex;
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.abt-img {
+  display: block;
+  margin-right: auto;
+  margin-left: 4vw;
+  margin-bottom: auto;
+  border: 3px solid var(--darkorange);
+  border-radius: 1%;
+}
+
+.container-abt h1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  font-weight: 80;
+  font-size: 2vw;
+  text-align: center;
+}
+.container-abt div {
+  padding: 2%;
+}
+.info {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
