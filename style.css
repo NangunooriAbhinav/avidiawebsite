@@ -1,0 +1,69 @@
+:root {
+  --orange: #ff4c29;
+  --black: #272829;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--black);
+  margin: 0;
+  color: white;
+  font-family: "Rubik", sans-serif;
+}
+
+.navbar {
+  position: relative;
+  top: 0px;
+  width: 98%;
+  height: 3%;
+  overflow: hidden;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  z-index: 10;
+  margin-bottom: 30px;
+}
+
+.navbar-left img {
+  height: 100px;
+  width: 160px;
+}
+
+.navbar a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  width: 8rem;
+  height: 4rem;
+  border: 3px solid var(--orange);
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: var(--black);
+  font-size: 1.2em;
+  font-weight: 550;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar a:hover {
+  background: var(--orange);
+  color: white;
+}
+.navbar-left {
+  padding: 10px;
+  position: relative;
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  padding: 10px;
+  position: relative;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
