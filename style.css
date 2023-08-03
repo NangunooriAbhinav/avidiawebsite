@@ -33,12 +33,11 @@ body {
 
 .navbar a {
   display: flex;
+  flex-direction: column;
   color: white;
   text-decoration: none;
   width: 8rem;
-  height: 4rem;
-  border: 3px solid var(--orange);
-  border-radius: 45px;
+  height: 2.5rem;
   transition: all 0.3s;
   cursor: pointer;
   background: var(--black);
@@ -48,14 +47,27 @@ body {
   justify-content: center;
 }
 
-.navbar a:hover {
-  background: var(--orange);
-  color: white;
+.navbar a::after {
+  margin-top: 5px;
+  content: "";
+  height: 5px;
+  width: 0%;
+  background-color: var(--orange);
+  transition: all 0.2s ease-out;
 }
+
+.navbar a:hover {
+  color: var(--orange);
+}
+
+.navbar a:hover::after {
+  width: 60%;
+}
+
 .navbar-left {
   padding: 10px;
   position: relative;
-  gap: 2rem;
+  gap: 1vw;
   display: flex;
   align-items: center;
 }
@@ -66,8 +78,15 @@ body {
   right: 30px;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 1vw;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .container {
   background-color: var(--black);
   position: relative;
@@ -87,8 +106,8 @@ body {
 
 .main-heading {
   background-color: var(--black);
-  top: 4rem;
-  left: 7rem;
+  top: 6vh;
+  left: 10vw;
   display: flex;
   position: absolute;
   height: 50%;
@@ -99,13 +118,9 @@ body {
   padding: 1%;
 }
 
-.main-heading-h1 {
-  font-weight: 80;
-}
-
 .sub-heading {
-  bottom: 3rem;
-  right: 8rem;
+  bottom: 4vh;
+  right: 10vw;
   background-color: var(--black);
   display: flex;
   position: absolute;
@@ -117,6 +132,66 @@ body {
   padding: 2%;
 }
 
-.sub-heading-h1 {
+.container h1 {
   font-weight: 80;
+  font-size: 2vw;
+}
+
+@media (width < 924px) {
+  .navbar-right {
+    display: none;
+  }
+}
+
+.title {
+  width: 75%;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.title h6 {
+  font-weight: 100;
+}
+
+.button {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 30px;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: var(--orange);
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 200px var(--orange);
+  color: #fff;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
 }
