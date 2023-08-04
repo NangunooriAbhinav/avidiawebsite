@@ -1,7 +1,9 @@
 :root {
   --orange: #ff4c29;
-  --black: #272829;
-  --lightblack: #484848;
+  /* --bg-color: #272829;
+  --lightorange: #484848; */
+  --bg-color: rgb(245, 238, 234);
+  --lightorange: rgb(252, 155, 80);
   --darkorange: #e45826;
 }
 
@@ -13,10 +15,14 @@
 
 body {
   overflow-x: hidden;
-  background-color: var(--black) !important;
+  background-color: var(--bg-color) !important;
   margin: 0;
-  color: white !important;
+  color: black !important;
   font-family: "Rubik", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .navbar {
@@ -30,24 +36,28 @@ body {
   align-items: center;
   padding: 0px 20px;
   z-index: 10;
-  margin-bottom: 30px;
+}
+
+hr {
+  margin-block: 0 3rem !important;
 }
 
 .navbar-left img {
-  height: 150px;
-  width: 150px;
+  margin-left: 1.5rem;
+  height: 100px;
+  object-fit: cover;
 }
 
 .navbar a {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: black;
   text-decoration: none;
   width: 8rem;
   height: 2.5rem;
   transition: all 0.3s;
   cursor: pointer;
-  background: var(--black);
+  background: var(--bg-color);
   font-size: 1.2em;
   font-weight: 550;
   align-items: center;
@@ -95,7 +105,7 @@ body {
 }
 
 .header .head-container {
-  background-color: var(--black);
+  background-color: var(--bg-color);
   position: relative;
   align-items: center;
   justify-content: center;
@@ -107,20 +117,20 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  border: 3px solid var(--darkorange);
   border-radius: 1%;
 }
 
 .main-heading {
-  background-color: var(--lightblack);
+  /* background-color: rgba(251, 243, 238, 1); */
+  background-color: rgba(252, 155, 80, 0.4);
   top: 4vh;
-  left: 9vw;
+  left: 6vw;
   display: flex;
   position: absolute;
   height: 50%;
-  width: 18%;
+  width: 18vw;
   align-items: center;
-  border: 3px solid var(--orange);
+  border: 2px solid black;
   border-radius: 5%;
   padding: 1%;
   box-sizing: content-box;
@@ -128,14 +138,14 @@ body {
 
 .sub-heading {
   bottom: 4vh;
-  right: 9vw;
-  background-color: var(--lightblack);
+  right: 6vw;
+  background-color: rgba(252, 155, 80, 0.4);
   display: flex;
   position: absolute;
   height: 50%;
-  width: 18%;
+  width: 18vw;
   align-items: center;
-  border: 3px solid var(--orange);
+  border: 1px solid black;
   border-radius: 5%;
   padding: 1%;
   box-sizing: content-box;
@@ -148,8 +158,8 @@ body {
 
 .sub-heading h1,
 .main-heading h1 {
-  font-weight: 450 !important;
-  font-size: 2vw;
+  font-weight: 250 !important;
+  font-size: 1.7vw !important;
 }
 @media (width < 924px) {
   .navbar-right {
@@ -182,7 +192,7 @@ body {
   cursor: pointer;
   overflow: hidden;
   border-radius: 30px;
-  color: white;
+  color: black;
   transition: all 0.5s ease-in-out;
 }
 
@@ -234,10 +244,11 @@ body {
 }
 
 .abt-img {
+  width: 50vw;
   display: block;
   margin: auto;
   margin-left: 2vw;
-  border: 3px solid var(--darkorange);
+  border: 0px solid var(--darkorange);
   border-radius: 1%;
 }
 
@@ -270,11 +281,7 @@ body {
 .info-block {
   display: flex;
   height: fit-content;
-  background-color: var(--lightblack);
-}
-
-.info-block:hover {
-  border: 0.15rem solid var(--orange);
+  background-color: var(--lightorange);
 }
 
 .info p {
@@ -299,7 +306,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: white;
+  color: black;
 }
 
 .keyfeatures .container {
@@ -330,12 +337,16 @@ body {
 .info .shape-1 {
   top: 10vh;
   right: 0.3vw;
-  z-index: -1;
 }
 
 .info .shape-2 {
-  bottom: 10px;
+  bottom: 10px; 
   left: 40px;
+}
+
+.info .shape-3 {
+  left: -50px;
+  z-index: 2 !important;
 }
 
 .bg-tertiary {
@@ -363,11 +374,11 @@ body {
   padding: 35px 27px;
   box-shadow: 0px 25px 65px 0px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
-  background-color: var(--lightblack);
+  background-color: var(--lightorange);
 }
 
 .block {
-  background-color: var(--lightblack);
+  background-color: var(--lightorange);
 }
 
 .icon-box-item .icon {
