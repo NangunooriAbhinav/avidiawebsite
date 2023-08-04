@@ -95,9 +95,24 @@ hr {
   right: 30px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1vw;
 }
 
+.navbar-right .button {
+  position: relative;
+  top: 0;
+  color: white;
+}
+
+.navbar-right .button {
+  background-color: var(--orange);
+}
+
+.navbar-right .button:hover {
+  background-color: var(--lightorange);
+  color: black;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -164,6 +179,9 @@ hr {
 @media (width < 924px) {
   .navbar-right {
     display: none;
+  }
+  .title-box {
+    order: -1;
   }
 }
 
@@ -317,6 +335,17 @@ hr {
   margin-left: auto;
 }
 
+.header .shape-1 {
+  position: absolute;
+  right: 30px;
+  bottom: 140px;
+}
+
+.head-container .shape-1 {
+  left: 30px;
+  bottom: 50px;
+}
+
 .core-value .has-shapes {
   z-index: 2;
   pointer-events: none;
@@ -340,13 +369,12 @@ hr {
 }
 
 .info .shape-2 {
-  bottom: 10px; 
+  bottom: 10px;
   left: 40px;
 }
 
 .info .shape-3 {
   left: -50px;
-  z-index: 2 !important;
 }
 
 .bg-tertiary {
