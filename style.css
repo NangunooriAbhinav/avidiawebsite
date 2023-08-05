@@ -598,10 +598,33 @@ hr {
 }
 
 @media (width < 924px) {
+  .navbar-left img {
+    height: 50px;
+    object-fit: cover;
+  }
+
   .navbar-right {
     display: none;
+    width: object;
   }
+
   .title-box {
     order: -1;
+  }
+
+  .header .shape-1 {
+    top: 50px;
+    right: 2px;
+    z-index: -2;
+  }
+
+  .head-container .shape-1 {
+    left: 10px;
+    top: -70px;
+  }
+
+  .shape {
+    height: 36;
+    width: 36;
   }
 }
