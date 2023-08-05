@@ -614,13 +614,13 @@ hr {
 
   .header .shape-1 {
     top: 50px;
-    right: 2px;
+    right: 20px;
     z-index: -2;
   }
 
   .head-container .shape-1 {
     left: 10px;
-    top: -70px;
+    top: -100px;
   }
 
   .shape {
