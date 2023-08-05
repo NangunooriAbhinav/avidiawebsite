@@ -247,6 +247,8 @@ hr {
 
 .container-abt {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   width: 100vw;
   height: 80vh;
   overflow: hidden;
@@ -257,7 +259,6 @@ hr {
   width: 50vw;
   display: block;
   margin: auto;
-  margin-left: 2vw;
   border: 0px solid var(--darkorange);
   border-radius: 1%;
 }
@@ -278,6 +279,7 @@ hr {
   width: 50%;
   height: 100%;
   display: grid;
+  margin: auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 1vw;
@@ -290,12 +292,13 @@ hr {
 
 .info-block {
   display: flex;
-  height: fit-content;
   background-color: var(--lightorange);
 }
 
-.info p {
+.info-block p {
+  border-radius: 0 !important;
   padding: 0 !important;
+  margin: 0;
 }
 
 .info h1 {
@@ -595,6 +598,10 @@ hr {
 .fa-linkedin::before {
   content: "\f08c";
   font-family: FontAwesome;
+}
+
+.shape {
+  z-index: -2 !important;
 }
 
 @media (width < 924px) {
