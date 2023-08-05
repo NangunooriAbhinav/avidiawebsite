@@ -14,7 +14,8 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  overflow-y: scroll;
   background-color: var(--bg-color) !important;
   margin: 0;
   color: black !important;
@@ -28,13 +29,14 @@ a {
 .navbar {
   position: relative;
   top: 0px;
-  width: 98%;
+  width: 98vw;
   height: 3%;
+  box-sizing: border-box;
   overflow: visible;
   justify-content: space-between;
   display: flex;
   align-items: center;
-  padding: 0px 20px;
+  padding: 0;
   z-index: 10;
 }
 
@@ -43,7 +45,6 @@ hr {
 }
 
 .navbar-left img {
-  margin-left: 1.5rem;
   height: 100px;
   object-fit: cover;
 }
@@ -337,7 +338,7 @@ hr {
 .head-container .shape-1 {
   left: 30px;
   bottom: 50px;
-  z-index: 10 !important;
+  z-index: 1 !important;
 }
 
 .core-value .has-shapes {
@@ -358,17 +359,18 @@ hr {
 }
 
 .info .shape-1 {
-  top: 10vh;
+  top: 5vh;
   right: 0.3vw;
 }
 
 .info .shape-2 {
-  bottom: 10px;
+  bottom: 0;
   left: 40px;
 }
 
 .info .shape-3 {
   left: -50px;
+  top: 0;
 }
 
 .bg-tertiary {
@@ -619,7 +621,8 @@ hr {
 }
 
 .navbar-right.active {
-  top: 13vh;
+  top: 11vh;
+  z-index: 10 !important;
 }
 
 .navbar-right.active a::after {
@@ -647,6 +650,9 @@ hr {
 }
 
 @media (width < 1024px) {
+  .wrapper .tooltip {
+    display: none;
+  }
 
   .main-img {
     width: 90vw;
@@ -658,7 +664,8 @@ hr {
     height: 30%;
   }
 
-  .main-heading h1, .sub-heading h1 {
+  .main-heading h1,
+  .sub-heading h1 {
     font-family: "Rubik", sans-serif;
     font-size: 2vw !important;
     font-weight: 400 !important;
@@ -691,6 +698,10 @@ hr {
     object-fit: cover;
   }
 
+  .navbar-left a::after {
+    display: none;
+  }
+
   .navbar-right {
     position: fixed;
     width: 100%;
@@ -708,12 +719,12 @@ hr {
 
   .header .shape-1 {
     top: 50px;
-    right: 20px;
+    right: 3px;
   }
 
   .head-container .shape-1 {
     left: 10px;
-    top: -100px;
+    top: -90px;
   }
 
   .shape {
@@ -748,7 +759,6 @@ hr {
 }
 
 @media (width < 576px) {
-
   .info h1 {
     margin-bottom: 2rem;
   }
