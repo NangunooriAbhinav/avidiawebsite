@@ -176,14 +176,6 @@ hr {
   font-weight: 250 !important;
   font-size: 1.7vw !important;
 }
-@media (width < 924px) {
-  .navbar-right {
-    display: none;
-  }
-  .title-box {
-    order: -1;
-  }
-}
 
 .title {
   position: relative;
@@ -603,4 +595,13 @@ hr {
 .fa-linkedin::before {
   content: "\f08c";
   font-family: FontAwesome;
+}
+
+@media (width < 924px) {
+  .navbar-right {
+    display: none;
+  }
+  .title-box {
+    order: -1;
+  }
 }
