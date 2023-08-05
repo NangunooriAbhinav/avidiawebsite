@@ -615,7 +615,6 @@ hr {
   .header .shape-1 {
     top: 50px;
     right: 20px;
-    z-index: -2;
   }
 
   .head-container .shape-1 {
